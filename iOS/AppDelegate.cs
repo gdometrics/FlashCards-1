@@ -1,5 +1,10 @@
-﻿using Foundation;
+using Foundation;
 using UIKit;
+using FlashCards.DB;
+using FlashCards.iOS.DB;
+using SQLite;
+using System;
+using System.IO;
 
 namespace FlashCards.iOS
 {
@@ -18,8 +23,11 @@ namespace FlashCards.iOS
 
 		public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
 		{
-			// Override point for customization after application launch.
-			// If not required for your application you can safely delete this method
+			//SetupDB DB
+			using (IDatabaseInitializer dbInit = new iOSDatabaseInitializer(iOSDatabaseConnectionProvider.GetNewConnection()))
+			{
+				dbInit.SetupDB();
+			}
 
 			return true;
 		}
