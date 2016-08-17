@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-namespace FlashCards.Repository
+namespace FlashCards.DAL
 {
-	public interface IRepository<TEntity> : IDisposable where TEntity : class
+	public interface IRepository<TEntity> : IDisposable where TEntity : new()
 	{
 		OperationResult Save(TEntity entity);
 		void Delete(TEntity entity);
-		TEntity Find(int id);
+		OperationResult<TEntity> Find(int id);
 		List<TEntity> FindAll();
 	}
 }

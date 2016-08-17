@@ -1,11 +1,11 @@
 ﻿using System;
 namespace FlashCards
 {
-	public class OperationResult<T> : OperationResult where T : class
+	public class OperationResult<T> : OperationResult where T : new()
 	{
 		public OperationResult()
 		{
-			this.ResultObject = null;
+			this.ResultObject = default(T);
 		}
 
 		public T ResultObject 

@@ -1,4 +1,5 @@
 ﻿using System;
+using FlashCards.DAL;
 using FlashCards.DB;
 using FlashCards.Models;
 using SQLite;
@@ -6,9 +7,9 @@ namespace FlashCards.iOS.DB
 {
 	public class iOSDatabaseInitializer : IDatabaseInitializer
 	{
-		SQLiteConnection _connection = null;
+		IAppDBConnection _connection = null;
 
-		public iOSDatabaseInitializer(SQLiteConnection conn)
+		public iOSDatabaseInitializer(IAppDBConnection conn)
 		{
 			if (conn == null)
 			{
@@ -19,7 +20,8 @@ namespace FlashCards.iOS.DB
 
 		public void SetupDB()
 		{
-			_connection.CreateTable<AppObject>(CreateFlags.AllImplicit);
+			
+			_connection.CreateTable<AppObject>();
 		}
 
 

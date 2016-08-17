@@ -2,8 +2,8 @@ using System;
 using UIKit;
 using SQLite;
 using System.IO;
-using FlashCards.Repository;
-using FlashCards.iOS.Repository;
+using FlashCards.DAL;
+using FlashCards.iOS.DAL;
 using FlashCards.Models;
 namespace FlashCards.iOS
 {

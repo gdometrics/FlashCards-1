@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using FlashCards.Models;
-using FlashCards.Repository;
-using SQLite;
+using FlashCards.DAL;
 
-namespace FlashCards.iOS.Repository
+namespace FlashCards.iOS.DAL
 {
-	public abstract class iOSRepository<TEntity> : IRepository<TEntity> where TEntity : class
+	public abstract class iOSRepository<TEntity> : IRepository<TEntity> where TEntity : new()
 	{
-		protected SQLiteConnection _connection;
+		//protected SQLiteConnection _connection;
+		protected IAppDBConnection _connection;
 
 		#region << Constructors >>
 
-		public iOSRepository(SQLiteConnection connection)
+		public iOSRepository(IAppDBConnection connection)
 		{
 			if (connection == null)
 			{
@@ -26,7 +25,7 @@ namespace FlashCards.iOS.Repository
 
 		public abstract void Delete(TEntity entity);
 
-		public abstract TEntity Find(int id);
+		public abstract OperationResult<TEntity> Find(int id);
 
 		public abstract List<TEntity> FindAll();
 

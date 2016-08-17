@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using FlashCards;
+using FlashCards.DAL;
 using FlashCards.Models;
-using SQLite;
-namespace FlashCards.iOS.Repository
+namespace FlashCards.iOS.DAL
 {
 	public class AppObjectRepository : iOSRepository<AppObject>
 	{
 
 		#region << Constructors >>
 
-		public AppObjectRepository(SQLiteConnection connection)
+		public AppObjectRepository(IAppDBConnection connection)
 		: base(connection)
 		{ }
 		#endregion
@@ -21,18 +20,17 @@ namespace FlashCards.iOS.Repository
 			throw new NotImplementedException();
 		}
 
-		public override AppObject Find(int id)
+		public override OperationResult<AppObject> Find(int id)
 		{
-			AppObject item = null;
+			//OperationResult<AppObject> result = new OperationResult<AppObject>();
 			try
 			{
-				item = _connection.Get<AppObject>(id);
+				return _connection.Get<AppObject>(id);
 			}
 			catch (Exception)
 			{
 				throw;
 			}
-			return item;
 		}
 
 		public override List<AppObject> FindAll()
@@ -47,9 +45,8 @@ namespace FlashCards.iOS.Repository
 			{
 				if (entity != null)
 				{
-					_connection.Insert(entity);
-					result.IsSuccess = true;
-			}
+					return _connection.Save(entity);
+				}
 			}
 			catch(Exception)
 			{

@@ -1,6 +1,8 @@
 ﻿using System;
-using SQLite;
+using FlashCards.DAL;
+using FlashCards.iOS.DAL;
 using System.IO;
+using SQLite;
 namespace FlashCards
 {
 	public static class iOSDatabaseConnectionProvider
@@ -13,9 +15,10 @@ namespace FlashCards
 			private set;
 		} 
 
-		public static SQLiteConnection GetNewConnection()
+		public static IAppDBConnection GetNewConnection()
 		{
-			return new SQLiteConnection(DBPath);
+			var connection = new SQLiteConnection(DBPath);
+			return new iOSQLiteDBConnection(connection);
 		}
 
 		static iOSDatabaseConnectionProvider()
