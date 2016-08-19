@@ -26,6 +26,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)DAL\iOS\iOSDatabaseConnectionProvider.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DAL\IDatabaseConnectionProvider.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DAL\IAppDBConnection.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DAL\iOS\iOSQLiteDBConnection.cs" />    
+    <Compile Include="$(MSBuildThisFileDirectory)DAL\iOS\iOSQLiteDBConnection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DAL\UnitOfWork.cs" />
   </ItemGroup>
 </Project>

@@ -31,21 +31,19 @@ namespace FlashCards.iOS
 			var strName = txtName.Text;
 			var strDescription = txtDescription.Text;
 
-			//TODO: Get this from UoW, and service, not directly from this page
-			using (iOSRepository<AppObject> appObjectRepo = new AppObjectRepository(iOSDatabaseConnectionProvider.GetNewConnection()))
+			using(UnitOfWork uow = new UnitOfWork(iOSDatabaseConnectionProvider.GetNewConnection()))
 			{
 				var aObj = new AppObject();
 				aObj.Name = strName;
 				aObj.Description = strDescription;
-				var result = appObjectRepo.Save(aObj);
+				var result = uow.ApplicationObjectRepository.Save(aObj);
 				if (result.IsSuccess)
 				{
 					lblResult.Text = "Success";
 				}
-				else{
+				else {
 					lblResult.Text = "Failure";
 				}
-
 			}
 		}
 	}
