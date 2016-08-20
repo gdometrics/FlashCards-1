@@ -18,6 +18,7 @@ namespace FlashCards
 		public static IAppDBConnection GetNewConnection()
 		{
 			var connection = new SQLiteConnection(DBPath);
+			Console.WriteLine("DB Path:" + DBPath);
 			return new iOSQLiteDBConnection(connection);
 		}
 

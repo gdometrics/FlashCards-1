@@ -122,6 +122,6 @@
     <Compile Include="SQLite\SQLite.cs" />
     <Compile Include="SQLite\SQLiteAsync.cs" />
   </ItemGroup>
-  <Import Project="..\FlashCards\FlashCards.Models.projitems" Label="Shared" Condition="Exists('..\FlashCards\FlashCards.Models.projitems')" />
+  <Import Project="..\FlashCards\FlashCards.projitems" Label="Shared" Condition="Exists('..\FlashCards\FlashCards.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

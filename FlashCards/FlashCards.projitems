@@ -3,15 +3,16 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>{D9CDC38A-3533-4AF7-939F-69674424B501}</SharedGUID>
+    <SharedGUID>{90291CA9-F0ED-44D2-A59D-5F81FBE65CB0}</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>FlashCards</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)FlashCards.Domain.shproj" />
-    <None Include="$(MSBuildThisFileDirectory)FlashCards.Models.projitems" />
-    <None Include="$(MSBuildThisFileDirectory)FlashCardsModels.projitems" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\Objects\" />
+    <Folder Include="$(MSBuildThisFileDirectory)DAL\" />
+    <Folder Include="$(MSBuildThisFileDirectory)DAL\iOS\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)OperationResult.cs" />
