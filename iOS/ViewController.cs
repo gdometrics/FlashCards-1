@@ -5,6 +5,8 @@ using System.IO;
 using FlashCards.DAL;
 using FlashCards.iOS.DAL;
 using FlashCards.Models;
+using FlashCards.Resources;
+
 namespace FlashCards.iOS
 {
 	public partial class ViewController : UIViewController
@@ -17,7 +19,6 @@ namespace FlashCards.iOS
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
-
 		}
 
 		public override void DidReceiveMemoryWarning()
@@ -26,7 +27,13 @@ namespace FlashCards.iOS
 			// Release any cached data, images, etc that aren't in use.		
 		}
 
-		partial void BtnAddAppObject_TouchUpInside(UIButton sender)
+		private void SetupLocalization()
+		{
+			btnSettings.SetTitle(AppResources.MainPageStart, UIControlState.Normal);
+			
+		}
+
+		/*partial void BtnAddAppObject_TouchUpInside(UIButton sender)
 		{
 			var strName = txtName.Text;
 			var strDescription = txtDescription.Text;
@@ -44,8 +51,6 @@ namespace FlashCards.iOS
 				else {
 					lblResult.Text = "Failure";
 				}
-			}
-
+			}*/
 		}
-	}
 }

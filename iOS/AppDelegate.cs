@@ -6,6 +6,8 @@ using SQLite;
 using System;
 using System.IO;
 using FlashCards.Models;
+using FlashCards.Resources;
+
 namespace FlashCards.iOS
 {
 	// The UIApplicationDelegate for the application. This class is responsible for launching the
