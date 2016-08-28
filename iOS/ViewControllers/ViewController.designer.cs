@@ -21,11 +21,20 @@ namespace FlashCards.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton btnSettings { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnStart { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (btnSettings != null) {
                 btnSettings.Dispose ();
                 btnSettings = null;
+            }
+
+            if (btnStart != null) {
+                btnStart.Dispose ();
+                btnStart = null;
             }
         }
     }

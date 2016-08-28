@@ -19,6 +19,7 @@ namespace FlashCards.iOS
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
+			this.SetupLocalization();
 		}
 
 		public override void DidReceiveMemoryWarning()
@@ -27,10 +28,22 @@ namespace FlashCards.iOS
 			// Release any cached data, images, etc that aren't in use.		
 		}
 
+		public override void PrepareForSegue(UIStoryboardSegue segue, Foundation.NSObject sender)
+		{
+			base.PrepareForSegue(segue, sender);
+			//var nextVwCtrlr = segue.DestinationViewController as AnyViewController();
+			//if(nextVwCtrlr != null) {
+			//	...
+			//  nextVwCtrlr.Property = "blah";
+			//  ...
+			//}
+		}
+
+
 		private void SetupLocalization()
 		{
-			btnSettings.SetTitle(AppResources.MainPageStart, UIControlState.Normal);
-			
+			btnSettings.SetTitle(AppResources.MainPageSettings, UIControlState.Normal);
+			btnStart.SetTitle(AppResources.MainPageStart, UIControlState.Normal);
 		}
 
 		/*partial void BtnAddAppObject_TouchUpInside(UIButton sender)

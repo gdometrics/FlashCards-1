@@ -102,6 +102,8 @@
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="SQLite\" />
+    <Folder Include="ViewControllers\" />
+    <Folder Include="ViewControllers\Settings\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -115,12 +117,16 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="SQLite\SQLite.cs" />
     <Compile Include="SQLite\SQLiteAsync.cs" />
+    <Compile Include="ViewControllers\Settings\SettingsViewController.cs" />
+    <Compile Include="ViewControllers\Settings\SettingsViewController.designer.cs">
+      <DependentUpon>SettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\ViewController.cs" />
+    <Compile Include="ViewControllers\ViewController.designer.cs">
+      <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FlashCards.Resources\FlashCards.Resources.csproj">
