@@ -47,15 +47,27 @@ namespace FlashCards.Resources {
             }
         }
         
-        public static string MainPageStart {
+        public static string MainPage_FlashCardsButtonTitle {
             get {
-                return ResourceManager.GetString("MainPageStart", resourceCulture);
+                return ResourceManager.GetString("MainPage_FlashCardsButtonTitle", resourceCulture);
             }
         }
         
-        public static string MainPageSettings {
+        public static string MainPage_SettingsButtonTitle {
             get {
-                return ResourceManager.GetString("MainPageSettings", resourceCulture);
+                return ResourceManager.GetString("MainPage_SettingsButtonTitle", resourceCulture);
+            }
+        }
+        
+        public static string MainPage_Title {
+            get {
+                return ResourceManager.GetString("MainPage_Title", resourceCulture);
+            }
+        }
+        
+        public static string MainPage_ReadingComprehensionButtonTitle {
+            get {
+                return ResourceManager.GetString("MainPage_ReadingComprehensionButtonTitle", resourceCulture);
             }
         }
     }

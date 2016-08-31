@@ -19,22 +19,40 @@ namespace FlashCards.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnFlashCards { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnReadingComprehension { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton btnSettings { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton btnStart { get; set; }
+        UIKit.UINavigationItem navItem { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
+            if (btnFlashCards != null) {
+                btnFlashCards.Dispose ();
+                btnFlashCards = null;
+            }
+
+            if (btnReadingComprehension != null) {
+                btnReadingComprehension.Dispose ();
+                btnReadingComprehension = null;
+            }
+
             if (btnSettings != null) {
                 btnSettings.Dispose ();
                 btnSettings = null;
             }
 
-            if (btnStart != null) {
-                btnStart.Dispose ();
-                btnStart = null;
+            if (navItem != null) {
+                navItem.Dispose ();
+                navItem = null;
             }
         }
     }

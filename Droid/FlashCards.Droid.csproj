@@ -61,6 +61,19 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
   </ItemGroup>
-  <Import Project="..\FlashCards\FlashCards.projitems" Label="Shared" Condition="Exists('..\FlashCards\FlashCards.projitems')" />
+  <ItemGroup>
+    <ProjectReference Include="..\FlashCards.DAL\FlashCards.DAL.csproj">
+      <Project>{DCDBF730-28CE-4D46-8231-BB61DEA055B6}</Project>
+      <Name>FlashCards.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FlashCards.Models\FlashCards.Models.csproj">
+      <Project>{A445B68F-FD09-4D5B-A67F-03C9E8CF7D05}</Project>
+      <Name>FlashCards.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FlashCards.Resources\FlashCards.Resources.csproj">
+      <Project>{4386FB47-D790-417C-AB5A-F3EFE93454AA}</Project>
+      <Name>FlashCards.Resources.iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

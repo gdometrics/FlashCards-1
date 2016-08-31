@@ -8,25 +8,4 @@
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>FlashCards</Import_RootNamespace>
   </PropertyGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Models\Objects\" />
-    <Folder Include="$(MSBuildThisFileDirectory)DAL\" />
-    <Folder Include="$(MSBuildThisFileDirectory)DAL\iOS\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)OperationResult.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Objects\AppObject.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Objects\IAppObject.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DAL\IDatabaseConnectionProvider.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DAL\IDatabaseInitializer.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DAL\IRepository.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DAL\iOS\AppObjectRepository.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DAL\iOS\iOSDatabaseConnectionProvider.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DAL\iOS\iOSDatabaseInitializer.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DAL\iOS\iOSRepository.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DAL\UnitOfWork.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DAL\iOS\iOSQLiteDBConnection.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DAL\IAppDBConnection.cs" />
-  </ItemGroup>
 </Project>

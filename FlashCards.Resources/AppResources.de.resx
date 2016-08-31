@@ -13,13 +13,20 @@
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 
-	<data name="MainPageStart" xml:space="preserve">
-	    <value>Start</value>
-	    <comment>Main page, label for btnStart button</comment>
+	<data name="MainPage_FlashCardsButtonTitle" xml:space="preserve">
+	    <value>Lernkarten</value>
+	    <comment>Main page, label for btnFlashCards button</comment>
 	</data>
-	<data name="MainPageSettings" xml:space="preserve">
+	<data name="MainPage_SettingsButtonTitle" xml:space="preserve">
 	    <value>Einstellungen</value>
 	    <comment>Main page, label for btnSettings button</comment>
 	</data>
-	
+		<data name="MainPage_Title" xml:space="preserve">
+	    <value>Home</value>
+	    <comment>Main page, Home title</comment>
+	</data>
+	<data name="MainPage_ReadingComprehensionButtonTitle" xml:space="preserve">
+	    <value>Lesen</value>
+	    <comment>Main page, Reading comprehension button title</comment>
+	</data>
 </root>

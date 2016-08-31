@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using FlashCards.DAL;
 
-namespace FlashCards.iOS.DAL
+namespace FlashCards.DAL
 {
-	public abstract class iOSRepository<TEntity> : IRepository<TEntity> where TEntity : new()
+	public abstract class Repository<TEntity> : IRepository<TEntity> where TEntity : new()
 	{
-		//protected SQLiteConnection _connection;
 		protected IAppDBConnection _connection;
 
 		#region << Constructors >>
 
-		public iOSRepository(IAppDBConnection connection)
+		public Repository(IAppDBConnection connection)
 		{
 			if (connection == null)
 			{
@@ -35,7 +33,8 @@ namespace FlashCards.iOS.DAL
 
 		#region << Dispose >>
 
-		public void Dispose(){
+		public void Dispose()
+		{
 			Dispose(true);
 			GC.SuppressFinalize(this);
 		}

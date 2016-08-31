@@ -101,7 +101,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
-    <Folder Include="SQLite\" />
     <Folder Include="ViewControllers\" />
     <Folder Include="ViewControllers\Settings\" />
   </ItemGroup>
@@ -112,13 +111,10 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="SQLite\SQLite.cs" />
-    <Compile Include="SQLite\SQLiteAsync.cs" />
     <Compile Include="ViewControllers\Settings\SettingsViewController.cs" />
     <Compile Include="ViewControllers\Settings\SettingsViewController.designer.cs">
       <DependentUpon>SettingsViewController.cs</DependentUpon>
@@ -131,9 +127,16 @@
   <ItemGroup>
     <ProjectReference Include="..\FlashCards.Resources\FlashCards.Resources.csproj">
       <Project>{4386FB47-D790-417C-AB5A-F3EFE93454AA}</Project>
-      <Name>FlashCards.Resources</Name>
+      <Name>FlashCards.Resources.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FlashCards.Models\FlashCards.Models.csproj">
+      <Project>{A445B68F-FD09-4D5B-A67F-03C9E8CF7D05}</Project>
+      <Name>FlashCards.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FlashCards.DAL\FlashCards.DAL.csproj">
+      <Project>{DCDBF730-28CE-4D46-8231-BB61DEA055B6}</Project>
+      <Name>FlashCards.DAL</Name>
     </ProjectReference>
   </ItemGroup>
-  <Import Project="..\FlashCards\FlashCards.projitems" Label="Shared" Condition="Exists('..\FlashCards\FlashCards.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

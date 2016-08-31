@@ -1,6 +1,6 @@
 ﻿using System;
 using FlashCards.DAL;
-using FlashCards.iOS.DAL;
+
 using FlashCards.Models;
 namespace FlashCards.DAL
 {
@@ -8,10 +8,10 @@ namespace FlashCards.DAL
 	{
 
 		private bool _dispose;
-		private AppObjectRepository _appObjectRepository;
+		private Repository<AppObject> _appObjectRepository;
 		private DAL.IAppDBConnection _connection;
 
-		public AppObjectRepository ApplicationObjectRepository
+		public Repository<AppObject> ApplicationObjectRepository
 		{
 			get
 			{

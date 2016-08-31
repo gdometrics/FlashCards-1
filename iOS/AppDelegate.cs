@@ -26,6 +26,7 @@ namespace FlashCards.iOS
 		public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
 		{
 			//SetupDB DB
+			var folderPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
 			using (IDatabaseInitializer dbInit = new iOSDatabaseInitializer(iOSDatabaseConnectionProvider.GetNewConnection()))
 			{
 				dbInit.SetupDB();

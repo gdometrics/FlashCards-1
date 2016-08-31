@@ -42,8 +42,9 @@ namespace FlashCards.iOS
 
 		private void SetupLocalization()
 		{
-			btnSettings.SetTitle(AppResources.MainPageSettings, UIControlState.Normal);
-			btnStart.SetTitle(AppResources.MainPageStart, UIControlState.Normal);
+			navItem.Title = AppResources.MainPage_Title;
+			btnFlashCards.SetTitle(AppResources.MainPage_FlashCardsButtonTitle, UIControlState.Normal);
+			btnSettings.SetTitle(AppResources.MainPage_SettingsButtonTitle, UIControlState.Normal);
 		}
 
 		/*partial void BtnAddAppObject_TouchUpInside(UIButton sender)

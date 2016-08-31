@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using FlashCards.DAL;
 using FlashCards.Models;
-namespace FlashCards.iOS.DAL
+namespace FlashCards.DAL
 {
-	public class AppObjectRepository : iOSRepository<AppObject>
+	public class AppObjectRepository : Repository<AppObject>
 	{
 
 		#region << Constructors >>
@@ -22,7 +22,6 @@ namespace FlashCards.iOS.DAL
 
 		public override OperationResult<AppObject> Find(int id)
 		{
-			//OperationResult<AppObject> result = new OperationResult<AppObject>();
 			try
 			{
 				return _connection.Get<AppObject>(id);

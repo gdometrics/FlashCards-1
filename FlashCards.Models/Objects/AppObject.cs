@@ -1,5 +1,4 @@
 ﻿using System;
-using SQLite;
 namespace FlashCards.Models
 {
 	public class AppObject : IAppObject
@@ -16,7 +15,7 @@ namespace FlashCards.Models
 		#endregion
 
 		#region << Properties >>
-		[PrimaryKey, AutoIncrement]
+		//[PrimaryKey, AutoIncrement]
 		public int Id
 		{
 			get;
