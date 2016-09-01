@@ -1,12 +1,11 @@
 using Foundation;
 using UIKit;
 using FlashCards.DB;
-using FlashCards.iOS.DB;
-using SQLite;
 using System;
 using System.IO;
 using FlashCards.Models;
-using FlashCards.Resources;
+using FlashCards.iOS.DB;
+//using FlashCards.Resources;
 
 namespace FlashCards.iOS
 {
@@ -27,7 +26,7 @@ namespace FlashCards.iOS
 		{
 			//SetupDB DB
 			var folderPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-			using (IDatabaseInitializer dbInit = new iOSDatabaseInitializer(iOSDatabaseConnectionProvider.GetNewConnection()))
+			using (IDatabaseInitializer dbInit = new iOSDatabaseInitializer(iOSDatabaseConnectionProvider.GetNewConnection(folderPath)))
 			{
 				dbInit.SetupDB();
 			}

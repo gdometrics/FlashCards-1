@@ -1,9 +1,7 @@
 using System;
 using UIKit;
-using SQLite;
 using System.IO;
 using FlashCards.DAL;
-using FlashCards.iOS.DAL;
 using FlashCards.Models;
 using FlashCards.Resources;
 
