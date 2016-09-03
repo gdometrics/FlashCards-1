@@ -5,6 +5,7 @@ using System;
 using System.IO;
 using FlashCards.Models;
 using FlashCards.iOS.DB;
+using FlashCards.DB.iOS;
 //using FlashCards.Resources;
 
 namespace FlashCards.iOS
@@ -26,7 +27,9 @@ namespace FlashCards.iOS
 		{
 			//SetupDB DB
 			var folderPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-			using (IDatabaseInitializer dbInit = new iOSDatabaseInitializer(iOSDatabaseConnectionProvider.GetNewConnection(folderPath)))
+			IDatabaseConnectionProvider connProvider = new iOSDatabaseConnectionProvider(folderPath, "FlashCards.db");
+			//TODO: IMPLEMENT DISPOSABLE INTERFACE TO IDatabaseConnectionProvider and dispose it within IDatabaseInitializer
+			using (IDatabaseInitializer dbInit = new iOSDatabaseInitializer(connProvider.GetNewConnection()))
 			{
 				dbInit.SetupDB();
 			}

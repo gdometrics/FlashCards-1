@@ -40,6 +40,7 @@
     <Compile Include="UnitOfWork.cs" />
     <Compile Include="Repository.cs" />
     <Compile Include="AppObjectRepository.cs" />
+    <Compile Include="DatabaseConnectionProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FlashCards.Models\FlashCards.Models.csproj">
